@@ -14,8 +14,6 @@ passport.deserializeUser((id, done) => {
 	});
 });
 
-const User = mongoose.model('users');
-
 passport.serializeUser((user, done) => {
 	done(null, user.id);
 });
