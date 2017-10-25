@@ -25,8 +25,20 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 require('./routes/paymentRoutes')(app);
 
+//	For production environment
+if(process.env.NODE_ENV === 'production'){
+	//	Let express use static build files such as main.js and main.css
+	app.use(express.static('client/build'));
+
+	//	Any route not identified by our routeHandler should be served by react-router i.e. index.html
+	const path = require('path');
+	app.get('*', (req,res) => {
+		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+	});
+}
+
 //	Spinning up server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-	console.log('server running on port : ' + PORT);
+	console.log('Express server running on port : ' + PORT);
 });
