@@ -23,7 +23,7 @@ class App extends Component {
 						<div className="container">
 							<Route exact path="/" component={Landing} />
 							<AuthRoute exact path="/surveys" component={Dashboard}/>
-							<AuthRoute exact path="/protected" component={SurveyNew}/>
+							<AuthRoute exact path="/surveys/new" component={SurveyNew}/>
 						</div>
 					</div>
 				</BrowserRouter>
