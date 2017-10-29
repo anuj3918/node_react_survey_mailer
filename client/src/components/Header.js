@@ -14,7 +14,8 @@ class Header extends Component {
 				return [
 					<li key="1"><Payment /></li>,
 					<li key="2"><a>Credits: {this.props.auth.credits}</a></li>,
-					<li key="3"><a href='/api/logout'>Logout</a></li>
+					<li key="3"><Link to={'/surveys'}>Surveys</Link></li>,
+					<li key="4"><a href='/api/logout'>Logout</a></li>
 				];
 		}
 	}
@@ -23,10 +24,11 @@ class Header extends Component {
 			<nav>
 				<div className="nav-wrapper">
 					<Link
-						to={ this.props.auth ? '/surveys' : '/'}
+						to='/'
 						className="left brand-logo"
+						style={{'marginLeft': '15px'}}
 					>
-					Emaily	
+					Survey Mailer	
 					</Link>
 					<ul id="nav-mobile" className="right">
 						{this.renderContent()}
