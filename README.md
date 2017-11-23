@@ -1,5 +1,7 @@
-# Survey Mailer
+## Survey Mailer
+*built with React, Redux and NodeJS*
 
+ 
 **Brief:** This is a full-stack project to send out surveys to people and record their responses.
 
 **Working demo:** https://polar-waters-95942.herokuapp.com/
@@ -27,20 +29,21 @@ Services: Google Oauth2.0, Stripe, Sendgrid
 
 **Steps:**
 
-a) Clone the repository and navigate inside it.
-b) Execute 'npm install'. This will install backend dependencies.
-c) Execute 'cd client' and run 'npm install'. This will install frontend dependencies.
-c) Open sendgrid_webhook.sh and replace MY_UNIQUE_USERNAME with any other string.
-c) Open config/dev.js and fill out all the keys in it.
+1) Clone the repository and navigate inside it.
+2) Execute 'npm install'. This will install backend dependencies.
+3) Execute 'cd client' and run 'npm install'. This will install frontend dependencies.
+4) Open sendgrid_webhook.sh and replace MY_UNIQUE_USERNAME with any other string.
+5) Open config/dev.js and fill out all the keys in it.
   - Navigate to [Google Developer Console](https://console.developers.google.com/) to create a new project, enable Google+ oauth API and enter the ClientID and ClientSecret provided.
   - Navigate to [mLab](https://mlab.com/) to create an account. Create a new user for your db and get the MongoDB URI.
   - Go to [Stripe](https://stripe.com/), create an account and get PublishableKey and SecretKey
   - Visit [Sendgrid](https://sendgrid.com/) to create an account and get SendgridKey. 
-  - In the redirectDomain, enter the url of your app, something like 'http://localhost:3000' or https://myNewApp.com
-d) Execute 'npm run start'.
-e) On your terminal window, a URL will be displayed by localtunnel which can be used to connect your local app to internet. Copy this Url.
-f) In Sendgrid dashboard, go to Settings -> Event Notification and turn it on. Paste this Url into HTTP Post Url like 'http://MY_UNIQUE_USERNAME.com/api/surveys/webhooks'. Save the settings.
-g) Browse the app.
+  - In the redirectDomain, enter the url of your app, something like 'http://localhost:3000' or 'https://myNewApp.com'.
+  
+6) Execute 'npm run start'.
+7) On your terminal window, a URL will be displayed by localtunnel which can be used to connect your local app to internet. Copy this Url.
+8) In Sendgrid dashboard, go to Settings -> Event Notification and turn it on. Paste this Url into HTTP Post Url like 'http://MY_UNIQUE_USERNAME.com/api/surveys/webhooks'. Save the settings.
+9) Browse the app.
 
 -----------------------------
 
