@@ -1,6 +1,6 @@
 Survey Mailer
 
-Brief: This is a full-stack project to send out surveys to the public and record responses from the recipients.
+Brief: This is a full-stack project to send out surveys to people and record their responses.
 
 Working demo: https://polar-waters-95942.herokuapp.com/
 
